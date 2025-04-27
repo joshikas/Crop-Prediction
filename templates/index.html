@@ -1,0 +1,118 @@
+{% extends "base.html" %}{%block content%}Details collection{% endblock%} {%block body%}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+    }
+    
+    body {
+        height: 100vh;
+        background-color: ghostwhite;
+    }
+    
+    h3 {
+        color: antiquewhite;
+        margin-left: 2rem;
+    }
+    
+    h1 {
+        margin: 20px;
+        word-spacing: 10px;
+    }
+    .main 
+    {
+        align: center;
+    height: 100%;
+    width: 80%;
+    border: 4px solid red;
+    }
+    
+    .info
+    {
+        border: 2px solid orange;
+        font-size: 22px;
+        color:orange;
+        background-color: #C7FDFF;
+    }
+    .form {
+        margin: auto;
+        margin-top: 2%;
+        padding: 30px;
+        width: 300px;
+        background-color: black;
+        border-radius: 9px;
+    }
+    
+    .box {
+        margin: 10px;
+        padding: 4px;
+        width: 240px;
+        border: 50px;
+        border-radius: 7px;
+    }
+    
+    .button {
+        background: orangered;
+        width: auto;
+        margin: 2rem;
+        border: solid 1px orange;
+        color: white;
+        text-shadow: 0 1px 0 rgb(220, 150, 21);
+        transition: all 1s;
+        border-radius: 30px;
+    }
+    
+    .button:hover {
+        box-shadow: 0 8px 16px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 1.2rem;
+        margin: 1.2rem;
+    }
+    
+    .button:active {
+        border-color: rgb(20, 16, 14);
+    }
+</style>
+<p style="background-image: url('crop-field.jpg');">
+<div class="form">
+    <div class="info"><a>Crop Recommend Prediction For Farmer</div>
+    <form action="/login" method="post">
+        <!-- Name:
+    <input type="text" name="nm" placeholer="Name" />
+    <p><input type="submit" value="submit" /></p> -->
+        <!-- <form action="#"> -->
+        <h1 style="color: orangered;text-shadow: 2px 2px 2px violet;">
+            <center>Submit Details</center>
+        </h1>
+        <h3>Nitrogen</h3>
+        </p><input type="number" step="any" min="1" max="200" name="Nitrogen" placeholder="Nitrogen in soil" class="box" required />
+        <br />
+        <h3>Phosphorous</h3>
+        <input type="number" step="any" min="1" max="200" name="Phosphorous" placeholder="Phosphorous in soil" class="box" required /><br />
+        <h3>Potassium</h3>
+        <input type="number" step="any" min="1" max="200" name="Potassium" placeholder="Potassium in soil" class="box" required /><br />
+        <h3>Temperature</h3>
+        <input type="number" step="any" min="1" max="65" name="Temperature" placeholder="Temperature in degree" class="box" required /><br />
+        <h3>Humidity</h3>
+        <input type="number" step="any" min="1" max="100" name="Humidity" placeholder="Humidity in percentage" class="box" required /><br />
+        <h3>PH</h3>
+        <input type="number" step="any" min="1" max="14" name="PH" placeholder="PH from 1-14" class="box" required /><br />
+        <!-- <select name="PH" class="" id="selection">
+            <option value="Select">Select</option>
+            {%for i in range(1,15):%}
+            <option value=5>{{i}}</option>
+            {%endfor%}
+        </select> -->
+        <h3>Rainfall</h3>
+        <input type="number" step="any" min="" max="" name="Rainfall" placeholder="Rainfall in mm" class="box" required /><br />
+
+        <p><input type="submit" class="button" value=" Submit " /></p>
+    </form>
+</div>
+</div>
+</div>
+{% endblock%}
